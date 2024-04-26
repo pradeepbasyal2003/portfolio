@@ -282,7 +282,7 @@ a.active {
 ==================================================*/
 
 #home {
-    background: url(../img/home-bg-2.jpg);
+    background: url(../img/IMG_1866.JPG);
     background-size: cover;
     height: 100vh;
 }
@@ -313,9 +313,9 @@ a.active {
     position: absolute;
     border: 10px solid #425BB5;
     width: 400px;
-    height: 400px;
+    height: 480px;
     top: 40px;
-    left: 50px;
+    left: 90px;
     z-index: 1
 }
 
