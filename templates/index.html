@@ -87,40 +87,25 @@
         <div class="container">
             <div class="col-md-12">
                 <h4>02</h4>
-                <h1 class="size-50">My <br /> Experience</h1>
+                <h1 class="size-50">My <br /> Education</h1>
                 <div class="h-50"></div>
             </div>
             <div class="col-md-12">
                 <ul class="timeline">
-                    <li class="timeline-event" data-aos="fade-up">
+
+                    {% for experience in experiences%}
+                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2*{{delay}}">
                         <label class="timeline-event-icon"></label>
                         <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">April 2016 - Present</p>
-                            <h3>Geil,Danke! GmbH</h3>
-                            <h4>eines Web-Studios</h4>
-                            <p><strong>Projektmanagement mit Scrum</strong>
-                                <br>Ständiges Verbessern des agilen Entwicklungsprozesses beispielsweise durch Grunt, Yeoman, GIT, JIRA und BrowserStack.</p>
+                            <p class="timeline-event-thumbnail">{{experience.date}}</p>
+                            <h3>{{experience.position}}</h3>
+                            <h4>{{experience.company}}</h4>
+                            <p>{{experience.description}}</p>
                         </div>
                     </li>
-                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
-                        <label class="timeline-event-icon"></label>
-                        <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">November 2014 - Mars 2016</p>
-                            <h3>Freelancer</h3>
-                            <h4>Designer und Autor</h4>
-                            <p>Konzeption, Design und Produktion von Digitalen Magazinen mit InDesign, der Adobe Digital Publishing Suite und HTML5. Co-Autorin der Fachbücher "Digitales Publizieren für Tablets" und "Adobe Digital Publishing Suite" erschienen im dpunkt.verlag.</p>
-                        </div>
-                    </li>
-                    <li class="timeline-event" data-aos="fade-up" data-aos-delay=".4">
-                        <label class="timeline-event-icon"></label>
-                        <div class="timeline-event-copy">
-                            <p class="timeline-event-thumbnail">April 2014</p>
-                            <h3>konplan gmbh</h3>
-                            <h4>IT-Consultant</h4>
-                            <p><strong>Systemarchitektur, Consulting</strong>
-                                <br>Konzeption und Modellierung von Systemen und APIs für Digital Publishing und Entitlement nach SOA</p>
-                        </div>
-                    </li>
+                    {{ update_delay}}
+                    {%endfor%}
+
                 </ul>
             </div>
         </div>
@@ -296,7 +281,7 @@
 
                 <ul class="social">
                     <li><a href="https://www.facebook.com/pradeep.basyal.10"><i class="ion-social-facebook"></i></a></li>
-                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="https://github.com/pradeepbasyal2003"><i class="ion-social-github"></i></a></li>
                     <li><a href="https://www.instagram.com/pradeepbasyal/"><i class="ion-social-instagram"></i></a></li>
                     <li><a href="#"><i class="ion-social-linkedin"></i></a></li>
                 </ul>
