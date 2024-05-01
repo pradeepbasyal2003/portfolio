@@ -31,3 +31,4 @@ def home(request):
         return delay
     return render(request , 'index.html' , views)
 
+
