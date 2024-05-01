@@ -4,8 +4,11 @@ from .models import *
 def home(request):
     views = {}
     delay = 0
+    #for experiences section
     views['experiences'] = Experiences.objects.all()
 
+    #for projects section
+    views['projects'] = Projects.objects.all()
 
 
     # contact post method

@@ -18,3 +18,12 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class Projects(models.Model):
+    name = models.CharField(max_length = 300)
+    genre = models.CharField(max_length = 300)
+    description = models.TextField()
+    image = models.ImageField(upload_to='media')
+
+    def __str__(self):
+        return self.name
