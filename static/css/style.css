@@ -636,14 +636,14 @@ a.active {
     background: #f3f3f3
 }
 
-#contact-form input,
+/*#contact-form input,
 #contact-form textarea {
     height: 50px;
     margin-bottom: 10px;
     border-radius: 0;
-}
+}*/
 
-#contact-form label {
+/*#contact-form label {
     display: block;
     margin-bottom: .2em;
     font-size: 13px;
@@ -662,7 +662,9 @@ a.active {
     line-height: 1.2rem;
     color: #D33E43;
     margin-left: 10px
-}
+}*/
+
+
 
 #contact-form input[type="text"].error,
 #contact-form input[type="password"].error,
@@ -680,6 +682,7 @@ a.active {
 #contact-form textarea.error {
     border-color: #D33E43
 }
+
 
 textarea {
     resize: none;
