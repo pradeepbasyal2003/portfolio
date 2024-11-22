@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vpqotw5p9ir$l8als1jce)(df$q(-ichuj-rd6ut5u1*clpl!o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh','127.0.0.1' ,'localhost' ,'basyalpradeep.com.np' , 'www.basyalpradeep.com.np']
+DEBUG = False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = False  # Vercel already enforces HTTPS
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh','127.0.0.1' ,'localhost' ,'.com.np']
 
 
 # Application definition
