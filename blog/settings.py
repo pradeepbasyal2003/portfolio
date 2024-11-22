@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vpqotw5p9ir$l8als1jce)(df$q(-ichuj-rd6ut5u1*clpl!o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh','127.0.0.1' ,'localhost']
 
 
 # Application definition
@@ -75,13 +75,20 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'OPJtJWvYJxjqBxDGnwSAjUzJfDAwduUK',
+#used the public networking host and port number
+#there was still a problem with authentication so used the postgres_password instead of pg_password and it worked
+        'HOST': 'autorack.proxy.rlwy.net',  # Or the hostname of your database server
+        'PORT': '17255',       # Default PostgreSQL port
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -115,12 +122,14 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+import os
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR , 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles_build' , 'static')
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
