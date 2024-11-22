@@ -4,7 +4,7 @@ django-phonenumber-field==7.3.0
 phonenumbers==8.13.35
 pillow==10.3.0
 psycopg==3.2.3
-psycopg2==2.9.10
+
 psycopg2-binary==2.9.10
 sqlparse==0.4.4
 typing_extensions==4.12.2
