@@ -22,6 +22,10 @@
     {
       "src": "/(.*)",
       "dest": "blog/wsgi.py"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/media/$1"
     }
   ]
 }
