@@ -78,25 +78,25 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'OPJtJWvYJxjqBxDGnwSAjUzJfDAwduUK',
-#used the public networking host and port number
-#there was still a problem with authentication so used the postgres_password instead of pg_password and it worked
-        'HOST': 'autorack.proxy.rlwy.net',  # Or the hostname of your database server
-        'PORT': '17255',       # Default PostgreSQL port
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'OPJtJWvYJxjqBxDGnwSAjUzJfDAwduUK',
+# #used the public networking host and port number
+# #there was still a problem with authentication so used the postgres_password instead of pg_password and it worked
+#         'HOST': 'autorack.proxy.rlwy.net',  # Or the hostname of your database server
+#         'PORT': '17255',       # Default PostgreSQL port
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
